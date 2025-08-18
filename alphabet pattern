@@ -1,0 +1,18 @@
+def mirrored_pattern(n):
+    for i in range(n):
+        # Left side letters
+        for j in range(n - i):
+            print(chr(65 + j), end=" ")
+
+        # Spaces in the middle
+        print("  " * (2 * i + 1), end="")
+
+        # Right side letters
+        for j in range(n - i - 1, -1, -1):
+            print(chr(65 + j), end=" ")
+
+        print()  # new line
+
+
+# Example usage
+mirrored_pattern(5)
